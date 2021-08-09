@@ -1,4 +1,37 @@
 <html>
-    <body><video controls="" src="https://v16.tiktokcdn.com/6a2e877fa138d5c09a7743405478700a/60b66994/video/tos/alisg/tos-alisg-pve-0037/979a955d258742edac1391d47d619657/?a=1180&amp;br=734&amp;bt=367&amp;cd=0%7C0%7C1&amp;ch=0&amp;cr=0&amp;cs=0&amp;cv=1&amp;dr=3&amp;ds=3&amp;er=&amp;l=20210601110825010234087038340B6535&amp;lr=tiktok&amp;mime_type=video_mp4&amp;net=0&amp;pl=0&amp;qs=0&amp;rc=M2Q6dTdseTU6NDMzODgzM0ApOGRmZzs8PDw2NzplZWQ4NGduYmtnXjYtc2hgLS1kLzRzczAzNjZgMmAxYC0vLTFhYDI6Yw%3D%3D&amp;vl=&amp;vr=" type="video/mp4" class="media-document mac video"></video>
-    </body>
+<head>
+  <title>Your Website Title</title> 
+</head>
+<body>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '{your-app-id}',
+            xfbml      : true,
+            version    : 'v3.2'
+          });
+        
+          // Get Embedded Video Player API Instance
+          var my_video_player;
+          FB.Event.subscribe('xfbml.ready', function(msg) {
+            if (msg.type === 'video') {
+              my_video_player = msg.instance;
+              console.log('ready');
+            }
+          });
+        };
+      </script>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+  <!-- Your embedded video player code -->
+  <div class="fb-video" data-href="https://www.facebook.com/facebook/videos/10153231379946729/" data-show-text="false">
+    <div class="fb-xfbml-parse-ignore">
+      <blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/">
+      </blockquote>
+    </div>
+  </div>
+
+</body>
 </html>
