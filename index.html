@@ -19,6 +19,18 @@
               console.log('ready');
             }
           });
+          my_video_player.subscribe('startedPlaying', function(e) {
+            console.log('startedPlaying');
+          });
+          my_video_player.subscribe('paused', function(e) {
+            console.log('paused');
+          });
+          my_video_player.subscribe('finishedPlaying', function(e) {
+            console.log('finishedPlaying');
+          });
+          my_video_player.subscribe('error', function(e) {
+            console.log('error');
+          });
         };
       </script>
   <!-- Load Facebook SDK for JavaScript -->
