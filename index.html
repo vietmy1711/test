@@ -24,6 +24,7 @@
                 console.log('paused');
               });
               my_video_player.subscribe('finishedPlaying', function(e) {
+                my_video_player.seek(0);
                 console.log('finishedPlaying');
               });
               my_video_player.subscribe('error', function(e) {
