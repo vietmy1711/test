@@ -4,6 +4,7 @@
 </head>
 <body>
     <script>
+        let ready = false;
         window.fbAsyncInit = function() {
           FB.init({
             appId      : '{your-app-id}',
@@ -16,6 +17,7 @@
           FB.Event.subscribe('xfbml.ready', function(msg) {
             if (msg.type === 'video') {
               my_video_player = msg.instance;
+              ready = true;
               console.log('ready');
               my_video_player.subscribe('startedPlaying', function(e) {
                 console.log('startedPlaying');
@@ -37,7 +39,9 @@
 
         function play() {
           console.log('lololo');
-          // my_video_player.play();
+          if (ready) {
+            my_video_player.play();
+          }
         }
       </script>
   <!-- Load Facebook SDK for JavaScript -->
