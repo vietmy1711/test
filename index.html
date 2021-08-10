@@ -5,6 +5,7 @@
 <body>
     <script>
         let ready = false;
+        let my_video_player;
         window.fbAsyncInit = function() {
           FB.init({
             appId      : '{your-app-id}',
@@ -13,7 +14,6 @@
           });
         
           // Get Embedded Video Player API Instance
-          var my_video_player;
           FB.Event.subscribe('xfbml.ready', function(msg) {
             if (msg.type === 'video') {
               my_video_player = msg.instance;
@@ -38,9 +38,15 @@
         };
 
         function play() {
-          console.log('lololo');
+          console.log('call play');
           if (ready) {
             my_video_player.play();
+          }
+        }
+        function pause() {
+          console.log('call pause');
+          if (ready) {
+            my_video_player.pause();
           }
         }
       </script>
