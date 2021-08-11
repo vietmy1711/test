@@ -19,6 +19,8 @@
               my_video_player = msg.instance;
               ready = true;
               console.log('ready');
+              let video = document.getElementsByTagName('video')[0];
+              console.log(video.src);
               my_video_player.subscribe('startedPlaying', function(e) {
                 console.log('startedPlaying');
               });
