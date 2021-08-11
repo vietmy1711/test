@@ -2,7 +2,7 @@
 <head>
   <title>Your Website Title</title> 
 </head>
-<body>
+<body onload="getVideo();"">
     <script>
         let ready = false;
         let my_video_player;
@@ -19,8 +19,6 @@
               my_video_player = msg.instance;
               ready = true;
               console.log('ready');
-              let video = document.getElementsByTagName('video')[0];
-              console.log(video);
               my_video_player.subscribe('startedPlaying', function(e) {
                 console.log('startedPlaying');
               });
@@ -38,6 +36,12 @@
             }
           });
         };
+
+        function getVideo() {
+          let video = document.getElementsByTagName('video')[0];
+              console.log(video);
+              console.log(video.src);
+        }
 
         function play() {
           console.log('call play');
