@@ -14,10 +14,14 @@
         align-items: center;
         display: flex;
     }
-  .center {
-        width: 50%;
-        margin: 0 auto;
-      }
+    .inner {
+  display: table;
+  margin: 0 auto;
+}
+
+.outer {
+  width:100%
+}
 </style>
 </head>
 <body>
@@ -77,8 +81,10 @@
   <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 
   <!-- Your embedded video player code -->
-  <div class=center">
+  <div class=outer">
+  <div class=inner">
   <div class="fb-video" data-href="https://fb.watch/7gGSNEzd9_/" data-width="414" data-lazy="true" data-allowfullscreen="false" data-autoplay="false" data-show-text="false">
+  </div>
   </div>
   </div>
 </body>
