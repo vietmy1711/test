@@ -31,7 +31,6 @@
               my_video_player = msg.instance;
               ready = true;
               console.log('ready');
-              my_video_player.pause();
               my_video_player.subscribe('startedPlaying', function(e) {
                 console.log('startedPlaying');
               });
@@ -74,7 +73,7 @@
   <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 
   <!-- Your embedded video player code -->
-  <div class="fb-video" data-href="https://fb.watch/7gGSNEzd9_/" data-autoplay="true" data-show-text="false">
+  <div class="fb-video" data-href="https://fb.watch/7gGSNEzd9_/" data-lazy="true" data-allowfullscreen="false" data-autoplay="false" data-show-text="false">
   </div>
 
 </body>
