@@ -55,6 +55,15 @@
           });
             }
           });
+          FB.api(
+              "/7gGSNEzd9_/videos",
+              function (response) {
+                if (response && !response.error) {
+                  /* handle the result */
+                  console.log(response);
+                }
+              }
+          );
         };
 
         function getVideo() {
