@@ -37,6 +37,7 @@
           FB.Event.subscribe('xfbml.ready', function(msg) {
             if (msg.type === 'video') {
               my_video_player = msg.instance;
+              console.log(my_video_player);
               ready = true;
               console.log('ready');
               my_video_player.subscribe('startedPlaying', function(e) {
